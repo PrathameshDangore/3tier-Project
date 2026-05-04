@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DevOps App — Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="logo">
+      <div class="logo-text">DevOps App</div>
+      <div class="logo-sub">3-Tier Dashboard</div>
+    </div>
+    <div class="nav-item active">Dashboard</div>
+    <div class="nav-item">Users</div>
+    <div class="nav-item">Database</div>
+  </div>
+
+  <div class="main">
+    <div class="topbar">
+      <div class="page-title">Dashboard
+        <div class="page-sub">3-Tier Web App — Live on AWS EC2</div>
+      </div>
+      <button class="btn btn-primary" onclick="loadUsers()">Refresh Users</button>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Total Users</div>
+        <div class="stat-value" id="user-count">0</div>
+        <span class="badge badge-green">Live from MariaDB</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Docker Containers</div>
+        <div class="stat-value">3</div>
+        <span class="badge badge-blue">All Running</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">K8s Pods</div>
+        <div class="stat-value">9</div>
+        <span class="badge badge-amber">3 per tier</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Pipeline Status</div>
+        <div class="stat-value">Passed</div>
+        <span class="badge badge-green">Jenkins CI</span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <span class="panel-title">Users — MariaDB</span>
+      </div>
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Email</th><th>Status</th></tr>
+        </thead>
+        <tbody id="user-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

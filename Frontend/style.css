@@ -1,0 +1,38 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #f5f6fa; font-family: 'Segoe UI', sans-serif; display: flex; }
+
+.sidebar { width: 200px; background: #fff; border-right: 1px solid #e8eaed;
+           min-height: 100vh; padding: 24px 0; }
+.logo { padding: 0 20px 20px; border-bottom: 1px solid #e8eaed; margin-bottom: 16px; }
+.logo-text { font-size: 15px; font-weight: 700; color: #1a73e8; }
+.logo-sub  { font-size: 10px; color: #9aa0a6; margin-top: 2px; }
+.nav-item  { padding: 10px 20px; font-size: 13px; color: #5f6368; cursor: pointer; }
+.nav-item.active { background: #e8f0fe; color: #1a73e8; font-weight: 500; }
+
+.main      { flex: 1; padding: 28px; }
+.topbar    { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.page-title { font-size: 20px; font-weight: 600; color: #202124; }
+.page-sub  { font-size: 12px; color: #9aa0a6; margin-top: 2px; }
+
+.btn-primary { background: #1a73e8; color: #fff; border: none;
+               padding: 9px 18px; border-radius: 8px; font-size: 13px; cursor: pointer; }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+.stat-card  { background: #fff; border: 1px solid #e8eaed; border-radius: 12px; padding: 18px 20px; }
+.stat-label { font-size: 11px; color: #9aa0a6; font-weight: 500; margin-bottom: 8px; }
+.stat-value { font-size: 26px; font-weight: 600; color: #202124; margin-bottom: 6px; }
+
+.badge        { font-size: 10px; padding: 3px 9px; border-radius: 20px; font-weight: 500; }
+.badge-green  { background: #e6f4ea; color: #137333; }
+.badge-blue   { background: #e8f0fe; color: #1a73e8; }
+.badge-amber  { background: #fef7e0; color: #b06000; }
+
+.panel        { background: #fff; border: 1px solid #e8eaed; border-radius: 12px; overflow: hidden; }
+.panel-header { padding: 14px 20px; border-bottom: 1px solid #f1f3f4; }
+.panel-title  { font-size: 13px; font-weight: 600; color: #202124; }
+
+table         { width: 100%; border-collapse: collapse; font-size: 13px; }
+thead th      { padding: 10px 20px; text-align: left; font-size: 11px;
+                color: #9aa0a6; background: #fafafa; border-bottom: 1px solid #f1f3f4; }
+tbody td      { padding: 12px 20px; color: #3c4043; border-bottom: 1px solid #f8f9fa; }
+tbody tr:hover td { background: #f8f9fa; }
