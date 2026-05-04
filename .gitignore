@@ -1,0 +1,5 @@
+Create a file called .gitignore in root folder and paste this:
+node_modules/
+.env
+*.log
+.DS_Store
