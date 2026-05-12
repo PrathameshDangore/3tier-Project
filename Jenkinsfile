@@ -10,21 +10,39 @@ pipeline {
       }
     }
 
+    stage('Cleanup') {
+      steps {
+        sh '''
+          docker rm -f mariadb frontend backend || true
+          docker network prune -f || true
+        '''
+      }
+    }
+
     stage('Build Docker Images') {
       steps {
-        sh 'docker-compose build'
+        sh '''
+          cd $WORKSPACE
+          docker-compose build
+        '''
       }
     }
 
     stage('Stop Old Containers') {
       steps {
-        sh 'docker-compose down'
+        sh '''
+          cd $WORKSPACE
+          docker-compose down || true
+        '''
       }
     }
 
     stage('Deploy') {
       steps {
-        sh 'docker-compose up -d'
+        sh '''
+          cd $WORKSPACE
+          docker-compose up -d
+        '''
       }
     }
 
