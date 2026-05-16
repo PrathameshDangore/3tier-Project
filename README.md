@@ -495,4 +495,4 @@ kubectl get pods
 - Terraform makes infrastructure repeatable, trackable and consistent
 
 ---
-<img src="images/3tier_devops_architecture_linkedin.svg" alt="3-Tier DevOps Architecture Diagram" width="500">
+<img src="./images/3tier_devops_architecture_linkedin.svg" alt="3-Tier DevOps Architecture Diagram" width="500">
