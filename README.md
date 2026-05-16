@@ -494,9 +494,5 @@ kubectl get pods
 - Case sensitivity matters — `Backend` vs `backend` broke my entire Jenkins pipeline
 - Terraform makes infrastructure repeatable, trackable and consistent
 
----
-<h2 align="center">Project Architecture</h2>
 
-<p align="center">
-  <img src="images/architecture.svg" alt="3-Tier DevOps Architecture" width="1000">
-</p>
+
